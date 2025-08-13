@@ -139,6 +139,8 @@ section {
   }
 }
 
+
+
 section h2 {
   font-size: 3rem;
   color: #dad8d8;
@@ -226,11 +228,27 @@ section h2 {
 }
 
 .imagen-proyecto img {
-    width: 50%;
+    width: 300px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    margin: 0 100px;
+    margin: 0 30px;
+}
+
+@media (max-width: 768px) {
+   .imagen-proyecto img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    margin: 0 30px;
+}
+}
+
+@media (max-width: 480px) {
+   .imagen-proyecto img {
+    display: none;   
+}
 }
 
 /* Botón centrado abajo */
@@ -582,7 +600,7 @@ footer {
     -webkit-text-fill-color: transparent;
     text-align: center;
     animation: brilloSuave 3s ease-in-out infinite alternate; 
-    margin-top: 150px; 
+    margin-bottom: 150px; 
 }
 
 @keyframes brilloSuave {
@@ -598,7 +616,6 @@ footer {
   text-align: center;
   font-size: 3.5rem;
   font-weight: bold;
-  margin: 20px 0;
   color: #dad8d8;
   animation: fadeInDown 1s ease;
 
@@ -766,6 +783,7 @@ footer {
 .botones-der {
   display: flex;
   gap: 10px;
+  margin-top: 5px;
 }
 
 .btn-red {
@@ -788,6 +806,70 @@ footer {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+@media (max-width: 768px) {
+#presentacion .foto-perfil{
+    float: left; 
+    width: 100%; 
+    height: auto;
+    border-radius: 12px; 
+    margin: 0 20px 10px 0; 
+    object-fit: cover;
+}
+#presentacion h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 50px ;
+  animation: fadeInDown 1.3s ease;
+  text-align: start;
+}
+  .boton-izq{
+     display: block;
+  gap: 10px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .botones-der {
+  display: block;
+  gap: 10px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+  .btn-red {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-red {
+    font-size: 1.5rem;
+    padding: 8px 16px;
+  }
+   #presentacion .foto-perfil{
+    float: left; 
+    width: 100%; 
+    height: auto;
+    border-radius: 12px; 
+    margin: 0 20px 10px 0; 
+    object-fit: cover;
+}
+  #presentacion .grado {
+  font-size: 2.2rem;
+}
+  #presentacion .nombre{
+     margin-bottom: 20px; 
+  }
+
+  #presentacion p{
+    text-align: center;
+  }
+}
 
 .btn-sumbit{
   background: #002a5e57;
@@ -795,4 +877,37 @@ footer {
   border: #0048a0 5px solid;
   margin: 0 auto;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 1.5rem;
+    padding: 8px 16px;
+  }
+  .nombre {
+    font-size: 6.5rem;
+    padding: 6px 12px;
+  }
+  h2,h3{
+    font-size: 2.2rem;
+  }
+  p,span,li{
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+ .nombre {
+    font-size: 4.5rem;
+    padding: 6px 12px;
+  }
+
+  h2,h3{
+    font-size: 2.2rem;
+  }
+  p,span,li{
+    font-size: 20px;
+  }
+
 }
