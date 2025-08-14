@@ -701,7 +701,7 @@ footer {
   #presentacion::before {
     content: '';
     position: absolute;
-    top: 0200px; 
+    top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
@@ -716,7 +716,7 @@ footer {
     #presentacion::after {
     content: '';
     position: absolute;
-    bottom: -200px; 
+    bottom: 0; 
     left: 0;
     width: 100%;
     height: 10px; 
