@@ -76,6 +76,8 @@ nav {
 .nav-links {
   display: flex;
   gap: 3rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-links a {
@@ -97,19 +99,19 @@ nav {
 
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
     right: 0;
     margin-top: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(050px);
     -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0;
     display: none;
     padding-left: 1.5rem;  
-
+    background-color: #0a1930e3;
+    transition: none;
   }
 
   .nav-links.show {
@@ -245,7 +247,7 @@ section h2 {
 }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
    .imagen-proyecto img {
     display: none;   
 }
