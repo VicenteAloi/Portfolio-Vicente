@@ -76,3 +76,37 @@ document.addEventListener('DOMContentLoaded', () => {
   activarLink(); // para que se aplique al cargar la página
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contacto-form");
+  const status = document.getElementById("contacto-status");
+
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.textContent = "Enviando...";
+    
+    const nombre = document.getElementById("nombre").value.trim();
+    const apellido = document.getElementById("apellido").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    // Reemplazá estos IDs por los de tu cuenta EmailJS
+    const SERVICE_ID  = "service_7lowkfo";
+    const TEMPLATE_ID = "template_nmpc1e4";
+
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+        nombre,
+        apellido,
+        email,
+        mensaje
+      });
+      status.textContent = "¡Mensaje enviado con éxito!";
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      status.textContent = "Hubo un error al enviar. Intentá de nuevo.";
+    }
+  });
+});

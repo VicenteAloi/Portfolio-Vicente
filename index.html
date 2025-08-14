@@ -6,6 +6,12 @@
   <title>Vicente Aloi | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Reemplazá con tu Public Key de EmailJS
+  emailjs.init("MS9_6taP6HiHaUJDy");
+</script>
+
 </head>
 <body>
     <header>
@@ -27,10 +33,10 @@
 <!-- Sección Presentación -->
     <section id="presentacion" class="fade-section">
         <div class="presentacion-container">
-             <h1 class="grado">Ingeniero en Sistemas de Información</h1>
+             <h1 class="grado">Estudiante Avanzado de Ingeniero en Sistemas de Información</h1>
             <h1 class="nombre">Vicente Aloi</h1>
            
-            <img src="assets/Vicente.png" alt="" class="foto-perfil">
+            <img src="assets/Vicente.jpg" alt="" class="foto-perfil">
             <p class="intro-text">
                 Como futuro Ingeniero en Sistemas de Información, aspiro a desarrollar soluciones tecnológicas innovadoras que mejoren la vida de las personas y optimicen 
                 procesos en las organizaciones. Me motiva seguir aprendiendo sobre nuevas tecnologías, trabajar en equipos multidisciplinarios y contribuir al crecimiento digital de las empresas. 
@@ -340,19 +346,35 @@
         <h2>Contacto</h2>
         <div class="contacto-container">  
             <p>¿Querés ponerte en contacto? Completa el formulario y te responderé pronto.</p>
-            <form action="#" method="POST"   class="contacto-form">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <form id="contacto-form" class="contacto-form">
+                <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                </div>
+                </div>
 
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje" rows="5" required></textarea>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
 
-            <button type="submit" class="btn-sumbit">Enviar</button>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje" rows="5" required></textarea>
+
+                <button type="submit" class="btn btn-red">
+                    <img src="assets/send-4008.png" alt="" class="icono-botones"> Enviar
+                </button>
+
+                <p id="contacto-status" style="margin-top:10px;"></p>
             </form>
         </div>
+
+        
+
     </section>
 
     <footer>
