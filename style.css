@@ -717,14 +717,13 @@ section h2 {
   flex: 1;
 }
 
-.contacto-form label,
-.contacto-form textarea {
+.contacto-form label {
   font-family: inherit;
   font-size: 1.2rem;
   color: #d4d4d4;
 }
 
-.contacto-form input{
+.contacto-form input, .contacto-form textarea{
    font-family: inherit;
   font-size: 1.2rem;
   color: #000000;
@@ -1422,9 +1421,6 @@ footer {
   }
 }
 
-/*--------------*/
-/* Proyectos Responsive */
-/*--------------*/
 
 
 
