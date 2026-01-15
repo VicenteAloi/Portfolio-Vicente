@@ -29,7 +29,6 @@ p,span,li{
 header {
   background-color: #0a1930;
   color: white;
-  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -84,8 +83,6 @@ nav {
 .nav-links {
   display: flex;
   gap: 3rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-links a {
@@ -1169,16 +1166,18 @@ footer {
 /* NavBar Responsive */
 /*--------------*/
 @media (max-width: 768px) {
+  nav{
+    padding: 0 15px;
+  }
   .menu-toggle {
     display: block;
   }
 
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 0;
     right: 0;
-    margin-top: 11px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     flex-direction: column;
@@ -1186,7 +1185,7 @@ footer {
     padding: 1rem 0;
     display: none;
     padding-left: 1.5rem;  
-    background-color: #0a1930e3;
+    background-color: #010916;
     transition: none;
     
   }
@@ -1200,12 +1199,11 @@ footer {
 /* Presentación Responsive */
 /*--------------*/
 @media (max-width: 768px) {
-    #presentacion {
-        max-width: 100%;
-        width: 100%;
-        padding: 4rem 1rem; 
-        position: relative;
-    }
+  #presentacion {
+    padding: 4rem 1rem; 
+    position: relative;
+  }
+
   #presentacion::before {
     content: '';
     position: absolute;
@@ -1219,9 +1217,9 @@ footer {
     pointer-events: none;
     z-index: -1;
     animation: fogMove 60s linear infinite;
-}
+  }
 
-    #presentacion::after {
+  #presentacion::after {
     content: '';
     position: absolute;
     bottom: 0; 
@@ -1230,70 +1228,28 @@ footer {
     height: 10px; 
     background: linear-gradient(to bottom, rgba(10,25,48,0) 0%, #010916 100%);
     pointer-events: none;
-}
-#presentacion .foto-perfil{
-    float: left; 
-    width: 100%; 
-    height: auto;
-    margin: 0 20px 10px 0; 
-    object-fit: cover;
-}
-#presentacion h2 {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 50px ;
-  animation: fadeInDown 1.3s ease;
-  text-align: start;
-}
+  }
+
+  #presentacion .foto-perfil{
+      float: left; 
+      width: 50%; 
+      height: auto;
+      margin: 0 20px 10px 0; 
+      object-fit: cover;
+  }
+
   .boton-izq{
-     display: block;
-  gap: 10px;
-  margin: auto;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+    display: block;
+    margin: auto;
+    text-align: center;
+    align-items: center;
   }
 
   .botones-der {
   display: block;
-  gap: 10px;
   margin: auto;
   text-align: center;
-  justify-content: center;
   align-items: center;
-}
-  .btn-red {
-    font-size: 1.5rem;
-    margin-top: 5px;
-    padding: 8px 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .btn-red {
-    font-size: 1.5rem;
-    padding: 8px 16px;
-  }
-   #presentacion .foto-perfil{
-    float: left; 
-    width: 100%; 
-    height: auto;
-    margin: 0 20px 10px 0; 
-    object-fit: cover;
-}
-  #presentacion .nombre{
-     margin-bottom: 20px; 
-  }
-
-  #presentacion p{
-    font-size: 1rem;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  h2{
-    font-size: 1rem;
-    margin-top: 10px;
   }
 
   .grado{
@@ -1304,6 +1260,13 @@ footer {
     font-size: 3rem;
     margin-bottom: 10px;
   }
+
+  #presentacion p{
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: left;
+  }
+
 }
 
 /*--------------*/
