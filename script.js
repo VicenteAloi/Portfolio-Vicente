@@ -179,7 +179,7 @@ const misProyectos = [
             "assets/proyectos/E-Commerce-3.png"
         ],
         links: [
-            { texto: "", url: "https://github.com/BochatayMauricio/Ecommerce-Celulares-FullStack", icono: "assets/database.png" },
+            { texto: "Código Fuente", url: "https://github.com/BochatayMauricio/Ecommerce-Celulares-FullStack", icono: "assets/database.png" },
         ]
     },
     {
@@ -201,7 +201,8 @@ const misProyectos = [
             
         ],
         links: [
-            { texto: "", url: "https://github.com/BochatayMauricio/Shopping-Management-EG.git", icono: "assets/database.png" },
+            { texto: "Código Fuente", url: "https://github.com/BochatayMauricio/Shopping-Management-EG.git", icono: "assets/database.png" },
+            { texto: "Página Web", url: "https://shopping-management-eg.onrender.com/public/Pages/Home/home.php", icono: "assets/web-icon.png" },
         ]
     },
     {
@@ -257,7 +258,7 @@ function renderizarProyectos() {
         const linksHTML = proy.links.map(link => `
             <a href="${link.url}" target="_blank" class="btn-modern">
                 <img src="${link.icono}" alt="Icono" class="icono-botones">
-                <span>Link a Código ${link.texto}</span>
+                <span>Link a ${link.texto}</span>
             </a>
         `).join('');
 
