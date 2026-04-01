@@ -4,14 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vicente Aloi | Portfolio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="../Portfolio-Vicente/assets/Icono.png"/>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  // Reemplazá con tu Public Key de EmailJS
-  emailjs.init("MS9_6taP6HiHaUJDy");
-</script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  
+  <script>
+    // Reemplazá con tu Public Key de EmailJS
+    emailjs.init("MS9_6taP6HiHaUJDy");
+  </script>
 
 </head>
 <body>
@@ -31,10 +39,9 @@
     </nav>
     </header>
 
-<!-- Sección Presentación -->
-    <section id="presentacion" class="fade-section">
+<section id="presentacion" class="fade-section">
         <div class="presentacion-container">
-             <h1 class="grado">Estudiante Avanzado de Ingeniería en Sistemas de Información</h1>
+             <h1 class="titulo-animado"><span class="grado"></span></h1>
             <h1 class="nombre">Vicente Aloi</h1>
            
             <img src="assets/Vicente.jpg" alt="" class="foto-perfil">
@@ -44,12 +51,10 @@
                 Busco crecer profesionalmente en el área de desarrollo de software, gestión de proyectos y análisis de datos, siempre con el objetivo de aportar valor y adaptarme a los desafíos del sector IT.
             </p>
             <div class="botones-contenedor">
-            <!-- Botón Descargar CV -->
-                <div class="boton-izq">
+            <div class="boton-izq">
                     <a href="assets/CV - Actual.pdf" download class="btn-modern CV" target="_blank"><img src="assets/download-icon.png" alt="" class="icono-botones">Descargar CV</a>
                 </div>
-            <!-- Botones Redes -->
-                <div class="botones-der">
+            <div class="botones-der">
                     <a href="https://github.com/VicenteAloi" target="_blank" class="btn-modern"><img src="assets/github.png" alt="" class="icono-botones"> Github</a>
                     <a href="https://wa.me/3464592820" target="_blank" class="btn-modern"><img src="assets/WhatsApp_icon.png" alt="" class="icono-botones"> WhatsApp</a>
                     <a href="https://www.linkedin.com/in/vicente-aloi-65a057311/" target="_blank" class="btn-modern"><img src="assets/linkedin.png" alt="" class="icono-botones"> LinkedIn</a>
@@ -58,49 +63,44 @@
         </div>
     </section>
 
-<!-- Sección Conocimiento -->
-    <section id="lenguajes" class="section-fade">
+<section id="lenguajes" class="section-fade">
     <h2>Lenguajes de Programación</h2>
     <div class="lenguajes-grid">
 
-        <div class="lenguaje html">
+        <div class="lenguaje html" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/html.png" alt="HTML"/>
             <span>HTML</span>
         </div>
 
-        <div class="lenguaje css">
+        <div class="lenguaje css" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/css-3.png" alt="CSS" />
             <span>CSS</span>
         </div>
 
-        <div class="lenguaje javascript" style="border-color: #f7df1e; background-color: #f7de1e75;">
+        <div class="lenguaje javascript" style="border-color: #f7df1e; background-color: #f7de1e75;" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/java-script.png" alt="JavaScript" />
             <span>JavaScript</span>
         </div>
 
-        <div class="lenguaje typescript">
+        <div class="lenguaje typescript" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/typescript-icon.png" alt="Typescript" />
             <span>Typescript</span>
         </div>
 
-        <div class="lenguaje python">
+        <div class="lenguaje python" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/python.png" alt="Python" />
             <span>Python</span>
         </div>
 
-        <div class="lenguaje java">
+        <div class="lenguaje java" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/java.png" alt="Java" />
             <span>Java</span>
         </div>
 
-        <div class="lenguaje php">
+        <div class="lenguaje php" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/php.png" alt="PHP" />
             <span>PHP</span>
         </div>
-    </div>
-
-
-
     </div>
     </section>
 
@@ -108,22 +108,22 @@
     <h2>Frameworks</h2>
     <div class="lenguajes-grid">
 
-        <div class="lenguaje angular">
+        <div class="lenguaje angular" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
         <img src="assets/angular.png" alt="Angular" />
         <span>Angular</span>
         </div>
 
-        <div class="lenguaje express" >
+        <div class="lenguaje express" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
         <img src="assets/express-js.png" alt="Express"/>
         <span>Express</span>
         </div>
 
-        <div class="lenguaje spring">
+        <div class="lenguaje spring" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
         <img src="assets/spring.png" alt="Spring" />
         <span>Spring</span>
         </div>
 
-        <div class="lenguaje bootstrap">
+        <div class="lenguaje bootstrap" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
         <img src="assets/Bootstrap-icon.png" alt="Bootstrap" />
         <span>Bootstrap</span>
         </div>
@@ -135,53 +135,50 @@
     <h2>Herramientas de trabajo</h2>
     <div class="lenguajes-grid">
 
-        <div class="lenguaje vscode">
+        <div class="lenguaje vscode" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
         <img src="assets/vs-code.png" alt="VS Code" />
         <span>VS Code</span>
         </div>
 
-        <div class="lenguaje apache">
+        <div class="lenguaje apache" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/apache-tomcat.png" alt="Apache" />
             <span>Apache</span>
         </div>
 
-        <div class="lenguaje node">
+        <div class="lenguaje node" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/NodeJs-icon.png" alt="Node.js" />
             <span>Node.js</span>
         </div>
 
-        <div class="lenguaje workbench">
+        <div class="lenguaje workbench" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/mysql-icon.png" alt="Workbench.js" />
             <span>Workbench</span>
         </div>
 
-        <div class="lenguaje sequelize">
+        <div class="lenguaje sequelize" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/sequelize-icon.png" alt="Sequelize.js" />
             <span>Sequelize</span>
         </div>
-        <div class="lenguaje intellij">
+        <div class="lenguaje intellij" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
                 <img src="assets/intellIJ-icon.png" alt="IntelliJ" />
                 <span>IntelliJ</span>
         </div>
-        <div class="lenguaje xampp">
+        <div class="lenguaje xampp" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <img src="assets/xampp.png" alt="Xampp"/>
             <span>Xampp</span>
         </div>
     </div>
     </section>
-<!-- Sección Proyectos -->
-    <section id="proyectos" class="section-fade">
+<section id="proyectos" class="section-fade">
         <h2>Proyectos</h2>
         <div id="contenedor-proyectos">
             
         </div>
     </section>
 
-<!-- Sección Experiencia -->
-    <section id="experiencia" class="section-fade">
+<section id="experiencia" class="section-fade">
         <h2>Experiencia</h2>
         <div class="timeline">
-            <!-- Item 1 -->
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>Soporte IT – Municipalidad de Rosario</h3>
@@ -193,16 +190,12 @@
                     </p>
                 </div>
             </div>
-
-          
         </div>
     </section>
-<!-- Sección Habilidades -->
-    <section id="habilidades" class="section-fade">
+<section id="habilidades" class="section-fade">
          <h2>Mis Habilidades</h2>
   <div class="cards-container">
-    <!-- Tarjeta habilidades fuertes -->
-    <div class="card-skills">
+    <div class="card-skills" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
       <h3>Habilidades Fuertes</h3>
       <ul>
         <li>Desarrollo Web</li>
@@ -213,8 +206,7 @@
       </ul>
     </div>
 
-    <!-- Tarjeta habilidades blandas -->
-    <div class="card-skills">
+    <div class="card-skills" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
       <h3>Habilidades Blandas</h3>
       <ul>
         <li>Trabajo en equipo</li>
@@ -225,8 +217,7 @@
     </div>
   </div>
     </section>
-<!-- Sección Contacto -->
-    <section id="contacto" class="section-fade">
+<section id="contacto" class="section-fade">
         <h2>Contacto</h2>
         <div class="contacto-container">  
             <p>¿Querés ponerte en contacto? Completa el formulario y te responderé pronto.</p>
@@ -257,9 +248,6 @@
                 <p id="contacto-status" style="margin-top:10px;"></p>
             </form>
         </div>
-
-        
-
     </section>
 
 <footer class="footer-compacto">
@@ -287,5 +275,16 @@
     </div>
   </div>
 </footer>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed('.grado', {
+    strings: ['Estudiante Avanzado de Ing. en Sistemas', 'Desarrollador Full Stack', 'Apasionado por la Tecnología'],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+</script>
+
 </body>
 </html>

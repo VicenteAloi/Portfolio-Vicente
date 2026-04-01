@@ -12,8 +12,9 @@ pointer-events: none;
 cursor: default; 
 } 
 
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Plus Jakarta Sans', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #010916;
   color: #d4d4d4;
   line-height: 1.6;
@@ -126,13 +127,37 @@ nav {
     }
 }
 
-.grado {
+.titulo-animado {
   text-align: center;
+  min-height: 90px; 
+  animation: fadeInDown 1s ease;
+}
+
+/* El texto que se escribe y el cursor */
+.grado {
   font-size: 3rem;
   font-weight: bold;
   color: #dad8d8;
-  animation: fadeInDown 1s ease;
+}
 
+.typed-cursor {
+  color: #3e80c7;
+  font-size: 3rem;
+}
+
+.typed-cursor {
+  color: #3e80c7;
+  font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  .grado {
+    min-height: 70px;
+    font-size: 2rem;
+  }
+  .typed-cursor {
+    font-size: 2rem;
+  }
 }
 
 .subtitulo {
@@ -311,12 +336,32 @@ section h2 {
   justify-content: center;
   color: #dad8d8;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.lenguaje:hover {
-  transform: scale(1.05);
+.section-fade.visible .lenguaje {
+    opacity: 1;
+    transform: translateY(0);
 }
+
+.lenguaje:nth-child(1) { transition-delay: 0.1s; }
+.lenguaje:nth-child(2) { transition-delay: 0.2s; }
+.lenguaje:nth-child(3) { transition-delay: 0.3s; }
+.lenguaje:nth-child(4) { transition-delay: 0.4s; }
+.lenguaje:nth-child(5) { transition-delay: 0.5s; }
+.lenguaje:nth-child(6) { transition-delay: 0.6s; }
+.lenguaje:nth-child(7) { transition-delay: 0.7s; }
+.lenguaje:nth-child(8) { transition-delay: 0.8s; }
+
+.lenguaje:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 20px currentColor; 
+    filter: brightness(1.2);
+    z-index: 2;
+}
+
 
 .lenguaje img {
   width: 48px;
@@ -369,7 +414,7 @@ section h2 {
 .proyecto:hover {
     transform: translateY(-10px);
     border-color: #4996e9; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(62, 128, 199, 0.1);
+    box-shadow: 0 10px 40px -10px rgba(62, 128, 199, 0.5), inset 0 0 20px rgba(62, 128, 199, 0.1);
 }
 
 .contenido {
@@ -1063,6 +1108,10 @@ footer {
     border-color: rgba(62, 128, 199, 0.5);
 }
 
+.js-tilt-glare {
+    border-radius: inherit;
+}
+
 /*--------------*/
 /* General Responsive */
 /*--------------*/
@@ -1383,7 +1432,3 @@ footer {
     gap: 0;
   }
 }
-
-
-
-
